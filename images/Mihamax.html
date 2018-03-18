@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mihamax</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Mihomax" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/catalog.css" rel="stylesheet">
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-collapse.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap-dropdown.js"></script>
+    
+    
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //for-mobile-apps -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/contactstyle.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/faqstyle.css" type="text/css" media="all" />
+    <link href="../css/single.css" rel='stylesheet' type='text/css' />
+    <link href="../css/medile.css" rel='stylesheet' type='text/css' />
+    <!-- banner-slider -->
+    <link href="../css/jquery.slidey.min.css" rel="stylesheet">
+    <!-- //banner-slider -->
+    <!-- pop-up -->
+    <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //pop-up -->
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <!-- banner-bottom-plugin -->
+    <link href="../css/owl.carousel.css" rel="stylesheet" type="text/css" media="all">
+    <script src="../js/owl.carousel.js"></script>
+    <script src="../js/checkform.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#owl-demo").owlCarousel({
+
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+                items: 5,
+                itemsDesktop: [640, 4],
+                itemsDesktopSmall: [414, 3]
+
+            });
+
+        });
+
+    </script>
+    <!-- //banner-bottom-plugin -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="../js/move-top.js"></script>
+    <script type="text/javascript" src="../js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+
+    </script>
+    
+    
+    
+    
+    <!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+
+
+<!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="mihamax_logo">
+                <a href="index.html">
+                    <h1><img src="../images/logo.png"></a>
+            </div>
+            <div class="w3_search">
+                <form action="#" method="post">
+                    <input type="text" name="Search" placeholder="Recherche" required="">
+                    <input type="submit" value="Aller">
+                </form>
+            </div>
+            <div class="w3l_sign_in_register">
+                <ul>
+                    <li><i class="" aria-hidden="true"></i>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">Se connecter</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!-- //header -->
+    <!-- bootstrap-pop-up -->
+    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    se connecter & s'inscrire
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <section>
+                    <div class="modal-body">
+                        <div class="w3_login_module">
+                            <div class="module form-module">
+                                <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+                                    <div class="tooltip">s'inscrire</div>
+                                </div>
+                                <div class="form">
+                                    <h3>Se connecter</h3>
+                                    <form action="validateuser.php" method="post">
+                                        <input type="email" name="emailaddress" placeholder="Courriel">
+                                        <input type="password" name="password" placeholder="Mot de passe" required="">
+                                        <input type="submit" value="Se connecter">
+                                    </form>
+                                </div>
+                                <div class="form">
+                                    <h3>Créer un compte</h3>
+                                    <form action="addcustomer.php" method="post" onsubmit="return validate(this);">
+                                        <input type="email" name="emailaddress" id="emailmsg" placeholder="Courriel" required="">
+                                        <input type="password" name="password" id="passwdmsg" placeholder="Mot de passe" required="">
+                                        <input type="password" name="repassword" id="repasswdmsg" placeholder=" Confirmer mot de passe" required="">
+
+                                        <input type="submit" value="Enregistrer">
+                                    </form>
+                                </div>
+                                <div class="cta"><a href="#">Vous avez oublié votre mot de passe?</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.toggle').click(function() {
+            // Switches the Icon
+            $(this).children('i').toggleClass('fa-pencil');
+            // Switches the forms  
+            $('.form').animate({
+                height: "toggle",
+                'padding-top': 'toggle',
+                'padding-bottom': 'toggle',
+                opacity: "toggle"
+            }, "slow");
+        });
+
+    </script>
+    <!-- //bootstrap-pop-up -->
+    <!-- nav -->
+    <div class="movies_nav">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Accueil</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Genres <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <li>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="series.html">Action</a></li>
+                                                <li><a href="series.html">Biographie</a></li>
+                                                <li><a href="series.html">Crime</a></li>
+                                                <li><a href="series.html">Famille</a></li>
+                                                <li><a href="series.html">Horreur</a></li>
+                                                <li><a href="series.html">Romance</a></li>
+                                                <li><a href="series.html">Sports</a></li>
+                                                <li><a href="series.html">Guerre</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="html/series.html">Adventure</a></li>
+                                                <li><a href="html/series.html">Comedie</a></li>
+                                                <li><a href="html/series.html">Documentaire</a></li>
+                                                <li><a href="html/series.html">Fantaisie</a></li>
+                                                <li><a href="genres.html">Thriller</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="series.html">Animation</a></li>
+                                                <li><a href="series.html">Costume</a></li>
+                                                <li><a href="series.html">Drame</a></li>
+                                                <li><a href="series.html">Histoire</a></li>
+                                                <li><a href="series.html">Musicale</a></li>
+                                                <li><a href="series.html">Psychologique</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="series.html">tv - séries</a></li>
+                            <li><a href="genres.html">nouveautés</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pays <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <li>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="series.html">Asie</a></li>
+                                                <li><a href="series.html">France</a></li>
+                                                <li><a href="series.html">Taiwan</a></li>
+                                                <li><a href="series.html">Amérique</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="series.html">Chine</a></li>
+                                                <li><a href="series.html">Hong kong</a></li>
+                                                <li><a href="series.html">Japon</a></li>
+                                                <li><a href="series.html">Thailand</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <li><a href="series.html">Europe</a></li>
+                                                <li><a href="series.html">Inde</a></li>
+                                                <li><a href="series.html">Corée</a></li>
+                                                <li><a href="series.html">Royaume-Uni</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="series.html">Top ventes</a></li>
+                            <li><a href="list.html">A - z list</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+<div class="container">
+	<h1 class="text-center">Catalogue de films</h1>
+	<div class="container">
+		<form>
+			<div class="form-row">
+				<div class="form-group col-md-2">
+					<label for="selectGenre">Genre</label>
+					<select id="selectGenre" name="genre" class="form-control">
+						<option selected>Choose...</option>
+						<option value="Action">Action</option>
+						<option value="Biographie">Biographie</option>
+						<option value="Crime">Crime</option>
+                        <option value="Famille">Famille</option>
+                        <option value="Horreur">Horreur</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Guerre">Guerre</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Comedie">Comedie</option>
+                        <option value="Documentaire">Documentaire</option>
+                        <option value="Fantaisie">Fantaisie</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Costume">Costume</option>
+                        <option value="Drame">Drame</option>
+                        <option value="Histoire">Histoire</option>
+                        <option value="Musicale">Musicale</option>
+                        <option value="Psychologique">Psychologique</option>
+					</select>
+				</div>
+				<div class="form-group col-md-3">
+					<label for="inputRealis">Recherhe par Realisateur</label>
+					<div class="input-group">
+						<input type="text" name="realisateur" class="form-control" id="inputRealis" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn btn-secondary" type="button">Go!</button>
+						</span>
+					</div>
+				</div>
+				<div class="form-group col-md-3">
+					<label for="inputActeur">Recherhe par Acteur</label>
+					<div class="input-group">
+						<input type="text" id="inputActeur" name="acteur" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn btn-secondary" type="button">Go!</button>
+						</span>
+					</div>
+				</div>
+				<div class="form-group col-md-2">
+					<label for="selectPays">Pays</label>
+					<select id="selectPays" name="pays" class="form-control">
+						<option selected>Choose...</option>
+						<option value="Asie">Asie</option>
+                        <option value="France">France</option>
+                        <option value="Taiwan">Taiwan</option>
+                        <option value="Amérique">Amérique</option>
+                        <option value="Chine">Chine</option>
+                        <option value="Hong kong">Hong kong</option>
+                        <option value="Japon">Japon</option>
+                        <option value="Thailand">Thailand</option>                        
+                        <option value="Europe">Europe</option>
+                        <option value="Inde">Inde</option>
+                        <option value="Corée">Corée</option>
+                        <option value="Royaume-Uni">Royaume-Uni</option>                        
+					</select>
+				</div>
+				<div class="form-group col-md-2">
+					<label for="inputNom">Par Nom de film</label>
+					<div class="input-group">
+						<input type="text" id="inputNom" name="nom" class="form-control" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn btn-secondary" type="button">Go!</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="row">
+		<br />
+<b>Notice</b>:  Undefined index: genre in <b>C:\EasyPHP-Devserver-17\eds-www\mihomax\mihomax\html\catalog.php</b> on line <b>354</b><br />
+<br />
+<b>Notice</b>:  Undefined variable: connexion in <b>C:\EasyPHP-Devserver-17\eds-www\mihomax\mihomax\html\catalog.php</b> on line <b>361</b><br />
+<br />
+<b>Fatal error</b>:  Uncaught Error: Call to a member function prepare() on null in C:\EasyPHP-Devserver-17\eds-www\mihomax\mihomax\html\catalog.php:361
+Stack trace:
+#0 {main}
+  thrown in <b>C:\EasyPHP-Devserver-17\eds-www\mihomax\mihomax\html\catalog.php</b> on line <b>361</b><br />

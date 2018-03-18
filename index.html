@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Ajax Project</title>
+		<meta name="description" content="Ajax example">
+		<meta name="author" content="Maksim Kotau">
+		<script src="scripts/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+	</head>
+	<body  onload="loadMeteo(); loadDoc('accueil.html')">
+		<header>
+			<h1>Projet 2</h1>
+			<h3>Outils de communication client-serveur</h3>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="javascript:void(0);" onclick="loadDoc('accueil.html')">Accueil</a></li>
+				<li><a href="javascript:void(0);" onclick="loadDoc('Fabrication.html')">Fabrication</a></li>
+				<li><a href="javascript:void(0);" onclick="loadDoc('Utilisation.html')">Utilisation</a></li>
+				<li><a href="javascript:void(0);" onclick="loadDoc('Elimination.html')">Elimination</a></li>
+				<li><a href="javascript:void(0);" onclick="loadDoc('Solution.html')">Solution</a></li>
+			</ul>
+		</nav>
+		<section>
+			<article id="infSource">
+			
+			</article>
+			<aside>
+				<h2>Météo</h2>
+				<p id="meteoCity"></p>
+				<p id="meteoDate"></p>
+				<p>Temperature: <span id="meteoTemp"></span>&#8451;</p>
+				<img id="meteoImage" src=""></img>
+				<h3>Recherche</h3>
+				<form action="" id="formRecherche">
+					<input type="text" class="textInput" placeholder="Rechercher..."></input>
+					<input type="image" class="imgSubmit" src="images/lens.png" alt="Lens" align="top"></input>
+				</form>
+			</aside>
+		</section>
+		<footer>
+			COPYRIGHT &copy; MAKSIM KOTAU - TOUS DROITS RÉSERVÉ
+		</footer>
+	</body>
+</html>
